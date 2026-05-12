@@ -14,5 +14,11 @@ public class SuperHuman extends Person {
     public int getPowerLevel(){
         return this.experiencePoints;
     }
+    public void attack(Person target) {
+        int newHealth = target.getHealth() - this.getPowerLevel();
+        target.setHealth(newHealth);
+        System.out.println(this.name + " attacks " + target.getName()
+                + " for " + this.getPowerLevel() + " damage!");
+    }
 
 }

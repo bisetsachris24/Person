@@ -9,4 +9,10 @@ public class Villain extends Person {
     public int getEvilnessLevel(){
         return this.experiencePoints;
     }
+    public void attack(Person target) {
+        int newHealth = target.getHealth() - this.getEvilnessLevel();
+        target.setHealth(newHealth);
+        System.out.println(this.name + " attacks " + target.getName()
+                + " for " + this.getEvilnessLevel() + " damage!");
+    }
 }
