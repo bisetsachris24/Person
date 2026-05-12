@@ -23,10 +23,6 @@ public class PersonApp {
                     + " for " + someSuperHuman.getPowerLevel() + " damage!");
             System.out.println(someVillain.getStatus());
 
-            // stop early if the villain is down before they can swing back
-            if (!someVillain.isAlive()) {
-                break;
-            }
 
             // Villain attacks the SuperHuman
             int heroNewHealth = someSuperHuman.getHealth() - someVillain.getEvilnessLevel();
@@ -48,11 +44,15 @@ public class PersonApp {
         }
 
         // declare the winner
-        System.out.println("--- Showdown Over ---");
+        System.out.println(" Showdown Over ");
         if (someSuperHuman.isAlive()) {
             System.out.println(someSuperHuman.getName() + " wins the showdown!");
         } else {
             System.out.println(someVillain.getName() + " wins the showdown!");
         }
+        System.out.println();
+        someSuperHuman.printBattleLog();
+        someVillain.printBattleLog();
     }
+
 }

@@ -14,5 +14,6 @@ public class Villain extends Person {
         target.setHealth(newHealth);
         System.out.println(this.name + " attacks " + target.getName()
                 + " for " + this.getEvilnessLevel() + " damage!");
+        this.logHit(target);
     }
 }
